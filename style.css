@@ -1,0 +1,224 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+html{
+	scroll-behavior:smooth;
+}
+
+body{
+
+	background:#363744;
+	font-family:Inter,sans-serif;
+	color:white;
+
+}
+
+nav{
+
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+
+	padding:30px 10%;
+
+	position:sticky;
+	top:0;
+
+	backdrop-filter:blur(15px);
+
+	background:rgba(0,0,0,.15);
+
+	z-index:10;
+
+}
+
+.links{
+
+	display:flex;
+	gap:30px;
+
+}
+
+.links a{
+
+	color:white;
+	text-decoration:none;
+	font-weight:600;
+
+}
+
+header{
+
+	height:70vh;
+
+	display:flex;
+
+	flex-direction:column;
+
+	align-items:center;
+
+	justify-content:center;
+
+	text-align:center;
+
+}
+
+header h1{
+
+	font-size:4rem;
+	font-weight:900;
+
+	margin-bottom:15px;
+
+}
+
+header p{
+
+	font-size:1.3rem;
+	opacity:.8;
+
+}
+
+section{
+
+	width:min(1100px,90%);
+	margin:auto;
+	padding:80px 0;
+
+}
+
+h2{
+
+	font-size:2rem;
+
+	margin-bottom:40px;
+
+}
+
+.carousel{
+
+	display:flex;
+	gap:30px;
+
+	animation:scroll 30s linear infinite;
+
+	width:max-content;
+
+}
+
+.carousel-section{
+
+	overflow:hidden;
+
+}
+
+.carousel video{
+
+	width:520px;
+
+	border-radius:20px;
+
+	box-shadow:0 25px 50px rgba(0,0,0,.35);
+
+	flex-shrink:0;
+
+}
+
+@keyframes scroll{
+
+	from{
+
+		transform:translateX(0);
+
+	}
+
+	to{
+
+		transform:translateX(-550px);
+
+	}
+
+}
+
+.cards{
+
+	display:grid;
+
+	grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+	gap:30px;
+
+}
+
+.card{
+
+	padding:30px;
+
+	border-radius:20px;
+
+	background:rgba(255,255,255,.06);
+
+	backdrop-filter:blur(15px);
+
+	border:1px solid rgba(255,255,255,.1);
+
+	transition:.35s;
+
+}
+
+.card:hover{
+
+	transform:translateY(-10px);
+
+}
+
+.skills{
+
+	display:flex;
+
+	flex-wrap:wrap;
+
+	gap:15px;
+
+}
+
+.skills span{
+
+	background:#4b4c5f;
+
+	padding:12px 22px;
+
+	border-radius:40px;
+
+	font-weight:600;
+
+}
+
+footer{
+
+	padding:60px;
+
+	text-align:center;
+
+	opacity:.6;
+
+}
+
+@media(max-width:900px){
+
+	header h1{
+
+		font-size:2.8rem;
+
+	}
+
+	.carousel video{
+
+		width:340px;
+
+	}
+
+}
